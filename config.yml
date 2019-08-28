@@ -1,0 +1,20 @@
+database:
+  driver: mssql
+  connection: driver={sql server};server=127.0.0.1;user id=sa;password=Eland123;database=fruit;port=1435
+  logger:
+    kafka:
+      brokers:
+        - 127.0.0.1:9092
+      topic: sqllog
+eventBroker:
+  kafka:
+    brokers:
+      - 127.0.0.1:9092
+    topic: fruit
+behaviorLog:
+  kafka:
+    brokers:
+      - 127.0.0.1:9092
+    topic: behaviorlog
+serviceName: go-api-sqlserver
+httpport: 8080
